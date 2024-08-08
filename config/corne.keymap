@@ -59,5 +59,14 @@
                                             &kp LGUI      &trans    &trans       &trans     &trans     &trans
             >;
         };
+
+        layer_3 {
+            bindings = <
+&kp TAB         &kp Q  &kp W  &kp F   &kp P   &kp G         &kp J      &kp L   &kp U   &kp Y   &kp SEMICOLON  &trans
+&kp BACKSPACE   &kp A  &kp R  &kp S   &kp T   &kp D         &trans     &trans  &trans  &trans  &trans         &trans
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C   &kp V   &kp B         &trans     &trans  &trans  &trans  &trans         &trans
+                              &trans  &trans  &kp RETURN    &kp SPACE  &trans  &trans
+            >;
+        };
     };
 };
