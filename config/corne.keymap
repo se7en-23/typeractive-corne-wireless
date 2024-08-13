@@ -9,6 +9,25 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_toggle_lower {
+            bindings = <&tog 1>;
+            key-positions = <37 24>;
+        };
+
+        combo_toggle_raise {
+            bindings = <&tog 2>;
+            key-positions = <40 35>;
+        };
+
+        combo_toggle_ctrl {
+            bindings = <&tog 2>;
+            key-positions = <11 24>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
