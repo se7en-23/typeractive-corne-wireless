@@ -25,6 +25,8 @@
             label = "SHIFT_CAPS_LOCK";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <300>;
         };
 
         Lower_Layer: Lower_Layer {
@@ -32,6 +34,8 @@
             label = "LOWER_LAYER";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>, <&tog 0>;
+
+            tapping-term-ms = <300>;
         };
 
         Raise_Layer: Raise_Layer {
@@ -39,6 +43,8 @@
             label = "RAISE_LAYER";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>, <&tog 3>;
+
+            tapping-term-ms = <300>;
         };
     };
 
