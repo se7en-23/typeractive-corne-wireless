@@ -93,8 +93,13 @@
         compatible = "zmk,conditional-layers";
 
         Colemak {
-            if-layers = <1 2>;
+            if-layers = <1 2 0>;
             then-layer = <3>;
+        };
+
+        Colemak+Raise+Lower {
+            if-layers = <3 1 2>;
+            then-layer = <0>;
         };
     };
 };
