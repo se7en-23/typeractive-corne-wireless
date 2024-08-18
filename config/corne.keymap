@@ -92,7 +92,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        Colemak {
+        Base+Raise+Lower {
             if-layers = <1 2 0>;
             then-layer = <3>;
         };
