@@ -9,7 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Colemak {
+            bindings = <&tog 3>;
+            key-positions = <35 40>;
+        };
+    };
 
     behaviors {
         Caps_Lock: Caps_Lock {
@@ -31,13 +38,6 @@
             label = "RAISE_LAYER";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>;
-        };
-
-        Caps_Lock: Caps_Lock {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_LOCK";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
     };
 
