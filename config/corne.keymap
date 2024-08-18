@@ -14,7 +14,8 @@
 
         Colemak {
             bindings = <&tog 3>;
-            key-positions = <35 40>;
+            key-positions = <35 11 0>;
+            layers = <3>;
         };
     };
 
