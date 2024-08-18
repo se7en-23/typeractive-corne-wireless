@@ -9,22 +9,35 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        combo_toggle_lower {
-            bindings = <&tog 1>;
-            key-positions = <37 24>;
+    behaviors {
+        Caps_Lock: Caps_Lock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_LOCK";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
 
-        combo_toggle_raise {
-            bindings = <&tog 2>;
-            key-positions = <40 35>;
+        Lower_Layer: Lower_Layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LOWER_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&tog 1>;
         };
 
-        combo_toggle_ctrl {
-            bindings = <&tog 2>;
-            key-positions = <11 24>;
+        Raise_Layer: Raise_Layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RAISE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+        };
+
+        Caps_Lock: Caps_Lock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_LOCK";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
     };
 
