@@ -43,15 +43,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Colemak {
-            bindings = <
-&kp TAB        &kp Q  &kp W  &kp F         &kp P   &kp G     &kp J   &kp L   &kp U      &kp Y       &kp SEMICOLON  &kp RCTRL
-&kp BACKSPACE  &kp A  &kp R  &kp S         &kp T   &kp D     &kp H   &kp N   &kp E      &kp I       &kp O          &kp SQT
-&kp LSHIFT     &kp Z  &kp X  &kp C         &kp V   &kp B     &kp K   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
-                             &kp LEFT_WIN  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
         QWERTY {
             display-name = "Base";
             bindings = <
@@ -79,6 +70,15 @@
 &trans     &trans  &trans  &trans    &trans  &trans    &mt LC(LEFT) LEFT  &kp DOWN      &kp UP        &mt LC(RIGHT) RIGHT  &trans        &trans
 &kp LSHFT  &trans  &trans  &trans    &trans  &trans    &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3         &bt BT_SEL 4  &bt BT_CLR
                            &kp LGUI  &trans  &trans    &trans             &trans        &trans
+            >;
+        };
+
+        Colemak {
+            bindings = <
+&kp TAB        &kp Q  &kp W  &kp F         &kp P   &kp G     &kp J   &kp L   &kp U      &kp Y       &kp SEMICOLON  &kp RCTRL
+&kp BACKSPACE  &kp A  &kp R  &kp S         &kp T   &kp D     &kp H   &kp N   &kp E      &kp I       &kp O          &kp SQT
+&kp LSHIFT     &kp Z  &kp X  &kp C         &kp V   &kp B     &kp K   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
+                             &kp LEFT_WIN  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
