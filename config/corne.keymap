@@ -9,20 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Colemak {
-            bindings = <&tog 3>;
-            key-positions = <35 11 0>;
-            layers = <3>;
-        };
-
-        Layout_layer {
-            bindings = <&tog 3>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         Shift_Caps_Lock: Shift_Caps_Lock {
@@ -97,7 +84,7 @@
 
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL       &kp AT            &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
+&kp TAB    &kp EXCL       &kp AT            &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR  &kp RPAR  &tog 3
 &trans     &kp LESS_THAN  &kp GREATER_THAN  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &kp ESC        &trans            &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
                                             &kp LGUI  &trans    &trans       &trans     &trans     &trans
