@@ -25,7 +25,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LOWER_LAYER";
             #binding-cells = <0>;
-            bindings = <&mo 0>, <&tog 0>, <&tog 0>;
+            bindings = <&mo 2>, <&tog 2>, <&tog 0>;
 
             tapping-term-ms = <300>;
         };
@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RAISE_LAYER";
             #binding-cells = <0>;
-            bindings = <&mo 0>, <&tog 0>, <&tog 0>;
+            bindings = <&mo 1>, <&tog 1>, <&tog 3>;
 
             tapping-term-ms = <301>;
         };
