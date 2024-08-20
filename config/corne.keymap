@@ -17,6 +17,11 @@
             key-positions = <35 11 0>;
             layers = <3>;
         };
+
+        Layout_layer {
+            bindings = <&tog 3>;
+            key-positions = <37 40>;
+        };
     };
 
     behaviors {
