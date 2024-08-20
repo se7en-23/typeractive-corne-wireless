@@ -52,7 +52,7 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R         &kp T         &kp Y      &kp U         &kp I          &kp O    &kp P     &kp RIGHT_CONTROL
+&kp TAB           &kp Q  &kp W  &kp E     &kp R         &kp T         &kp Y      &kp U         &kp I          &kp O    &kp P     &kp RCTRL
 &kp BACKSPACE     &kp A  &kp S  &kp D     &kp F         &kp G         &kp H      &kp J         &kp K          &kp L    &kp SEMI  &kp SQT
 &Shift_Caps_Lock  &kp Z  &kp X  &kp C     &kp V         &kp B         &kp N      &kp M         &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                                 &kp LGUI  &Lower_Layer  &kp RETURN    &kp SPACE  &Raise_Layer  &kp RIGHT_ALT
@@ -101,17 +101,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        Base+Raise+Lower {
-            if-layers = <1 2 0>;
-            then-layer = <3>;
-        };
-
-        Colemak+Raise+Lower {
-            if-layers = <3 1 2>;
-            then-layer = <0>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
