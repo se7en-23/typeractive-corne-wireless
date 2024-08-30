@@ -74,20 +74,20 @@
         Raise {
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL       &kp AT            &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
-&trans     &kp LESS_THAN  &kp GREATER_THAN  &trans    &kp HOME  &kp PG_UP    &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &kp ESC        &trans            &trans    &kp END   &kp PG_DN    &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
-                                            &kp LGUI  &trans    &trans       &trans     &trans     &trans
+&kp TAB    &kp EXCL  &kp AT         &kp HASH       &kp DLLR          &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR  &kp RPAR  &kp ESC
+&trans     &kp HOME  &kp PAGE_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans       &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &kp END   &kp PAGE_DOWN  &kp LC(C)      &kp LC(V)         &trans       &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
+                                    &kp LGUI       &trans            &trans       &trans     &trans     &trans
             >;
         };
 
         Lower {
             display-name = "Lower";
             bindings = <
-&kp TAB    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6             &kp N7    &kp N8  &kp N9               &kp N0   &trans
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mt LC(LEFT) LEFT  &kp DOWN  &kp UP  &mt LC(RIGHT) RIGHT  &trans   &bt BT_CLR
-&kp LSHFT  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6             &kp F7    &kp F8  &kp F9               &kp F10  &trans
-                                       &kp LGUI      &trans        &trans          &trans             &trans    &trans
+&kp TAB    &kp N1                         &kp N2                     &kp N3                   &kp N4                           &kp N5    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans
+&trans     &kp N6                         &kp N7                     &kp N8                   &kp N9                           &kp N0    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &bt BT_CLR
+&kp LSHFT  &mt LC(LEFT_ARROW) LEFT_ARROW  &mt LC(UP_ARROW) UP_ARROW  &mt LC(DOWN) DOWN_ARROW  &mt LC(RIGHT_ARROW) RIGHT_ARROW  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+                                                                     &kp LGUI                 &trans                           &trans    &trans        &trans        &trans
             >;
         };
 
