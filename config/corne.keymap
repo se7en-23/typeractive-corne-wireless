@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     combos {
@@ -64,18 +65,18 @@
         QWERTY {
             display-name = "Base";
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E     &kp R         &kp T         &kp Y      &kp U         &kp I             &kp O    &kp P     &kp RIGHT_ALT
-&kp BACKSPACE     &kp A  &kp S  &kp D     &kp F         &kp G         &kp H      &kp J         &kp K             &kp L    &kp SEMI  &kp SQT
-&Shift_Caps_Lock  &kp Z  &kp X  &kp C     &kp V         &kp B         &kp N      &kp M         &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                &kp LGUI  &Lower_Layer  &kp RETURN    &kp SPACE  &Raise_Layer  &kp LEFT_CONTROL
+&kp TAB           &kp Q        &kp W        &kp E        &kp R         &kp T          &kp Y      &kp U         &kp I             &kp O    &mt LG(LS(S)) P  &kp RIGHT_ALT
+&kp BACKSPACE     &kp A        &kp S        &kp D        &kp F         &kp G          &kp H      &kp J         &kp K             &kp L    &kp SEMI         &kp SQT
+&Shift_Caps_Lock  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V   &mt LC(B) B    &kp N      &mt K_MUTE M  &kp COMMA         &kp DOT  &kp FSLH         &kp RIGHT_SHIFT
+                                            &kp LGUI     &Lower_Layer  &kp RETURN     &kp SPACE  &Raise_Layer  &kp LEFT_CONTROL
             >;
         };
 
         Raise {
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT         &kp HASH       &kp DLLR          &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR  &kp RPAR  &kp ESC
-&trans     &kp HOME  &kp PAGE_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans       &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &kp GRAVE
+&kp TAB    &kp EXCL  &kp AT         &kp HASH       &kp DLLR          &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR  &kp RPAR  &trans
+&trans     &kp HOME  &kp PAGE_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans       &kp MINUS  &kp EQUAL  &kp LBKT      &kp RBKT  &kp BSLH  &trans
 &kp LSHFT  &kp END   &kp PAGE_DOWN  &kp LC(C)      &kp LC(V)         &trans       &kp UNDER  &kp PLUS   &kp LBRC      &kp RBRC  &kp PIPE  &kp TILDE
                                     &kp LGUI       &trans            &trans       &trans     &trans     &trans
             >;
@@ -85,8 +86,8 @@
             display-name = "Lower";
             bindings = <
 &kp TAB    &kp N1                         &kp N2                     &kp N3                   &kp N4                           &kp N5    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans
-&trans     &kp N6                         &kp N7                     &kp N8                   &kp N9                           &kp N0    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &bt BT_CLR
-&kp LSHFT  &mt LC(LEFT_ARROW) LEFT_ARROW  &mt LC(UP_ARROW) UP_ARROW  &mt LC(DOWN) DOWN_ARROW  &mt LC(RIGHT_ARROW) RIGHT_ARROW  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans     &kp N6                         &kp N7                     &kp N8                   &kp N9                           &kp N0    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans
+&kp LSHFT  &mt LC(LEFT_ARROW) LEFT_ARROW  &mt LC(UP_ARROW) UP_ARROW  &mt LC(DOWN) DOWN_ARROW  &mt LC(RIGHT_ARROW) RIGHT_ARROW  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
                                                                      &kp LGUI                 &trans                           &trans    &trans        &trans        &trans
             >;
         };
@@ -99,7 +100,23 @@
                              &kp LEFT_WIN  &trans  &trans    &trans  &trans  &trans
             >;
         };
+
+        Nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans            &mkp LCLK       &trans          &mkp RCLK        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mwh SCROLL_UP    &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mwh SCROLL_DOWN  &trans          &mmv MOVE_DOWN  &trans           &trans  &trans
+                        &trans  &trans  &trans    &trans            &trans          &trans
+            >;
+        };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Mouse_Nav {
+            if-layers = <1 2>;
+            then-layer = <4>;
+        };
+    };
 };
