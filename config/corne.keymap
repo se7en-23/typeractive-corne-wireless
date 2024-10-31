@@ -74,20 +74,20 @@
         Raise {
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT         &kp HASH       &kp DLLR          &kp PRCNT    &kp CARET     &kp AMPS      &kp ASTERISK  &kp LPAR      &kp RPAR      &kp ESC
-&trans     &kp HOME  &kp PAGE_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans       &kp MINUS     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH      &kp GRAVE
-&kp LSHFT  &kp END   &kp PAGE_DOWN  &kp LC(C)      &kp LC(V)         &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-                                    &kp LGUI       &trans            &trans       &trans        &trans        &trans
+&kp TAB  &kp EXCL  &kp AT         &kp HASH       &kp DLLR          &kp PRCNT    &kp CARET     &kp AMPS      &kp ASTERISK  &kp LPAR      &kp RPAR      &kp ESC
+&trans   &kp HOME  &kp PAGE_UP    &kp LESS_THAN  &kp GREATER_THAN  &trans       &kp MINUS     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH      &kp GRAVE
+&trans   &kp END   &kp PAGE_DOWN  &kp LC(C)      &kp LC(V)         &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+                                  &trans         &trans            &trans       &trans        &trans        &trans
             >;
         };
 
         Lower {
             display-name = "Lower";
             bindings = <
-&kp TAB    &kp N1        &kp N2  &kp N3        &kp KP_DIVIDE  &kp KP_MULTIPLY    &trans  &trans    &trans        &trans     &trans  &trans
-&trans     &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PERIOD     &kp KP_MINUS       &trans  &kp LEFT  &kp UP_ARROW  &kp RIGHT  &trans  &bt BT_CLR
-&kp LSHFT  &kp N7        &kp N8  &kp N9        &kp N0         &kp PLUS           &trans  &trans    &kp DOWN      &trans     &trans  &trans
-                                 &kp LGUI      &trans         &trans             &trans  &trans    &trans
+&kp TAB  &kp N1        &kp N2  &kp N3        &kp KP_DIVIDE  &kp KP_MULTIPLY    &trans  &trans    &trans        &trans     &trans  &trans
+&trans   &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PERIOD     &kp KP_MINUS       &trans  &kp LEFT  &kp UP_ARROW  &kp RIGHT  &trans  &bt BT_CLR
+&trans   &kp N7        &kp N8  &kp N9        &kp N0         &kp PLUS           &trans  &trans    &kp DOWN      &trans     &trans  &trans
+                               &trans        &trans         &trans             &trans  &trans    &trans
             >;
         };
 
@@ -95,7 +95,7 @@
             bindings = <
 &kp TAB        &kp Q  &kp W  &kp F         &kp P   &kp G     &kp J   &kp L   &kp U      &kp Y       &kp SEMICOLON  &kp RCTRL
 &kp BACKSPACE  &kp A  &kp R  &kp S         &kp T   &kp D     &kp H   &kp N   &kp E      &kp I       &kp O          &kp SQT
-&kp LSHIFT     &kp Z  &kp X  &kp C         &kp V   &kp B     &kp K   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
+&trans         &kp Z  &kp X  &kp C         &kp V   &kp B     &kp K   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
                              &kp LEFT_WIN  &trans  &trans    &trans  &trans  &trans
             >;
         };
