@@ -84,10 +84,10 @@
         Lower {
             display-name = "Lower";
             bindings = <
-&kp TAB  &kp N1        &kp N2  &kp N3        &kp KP_DIVIDE  &kp KP_MULTIPLY    &trans  &trans    &trans        &trans     &trans  &trans
-&trans   &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PERIOD     &kp KP_MINUS       &trans  &kp LEFT  &kp UP_ARROW  &kp RIGHT  &trans  &bt BT_CLR
-&trans   &kp N7        &kp N8  &kp N9        &kp N0         &kp PLUS           &trans  &trans    &kp DOWN      &trans     &trans  &trans
-                               &trans        &trans         &trans             &trans  &trans    &trans
+&kp TAB     &kp N1        &kp N2  &kp N3        &kp KP_DIVIDE  &kp KP_MULTIPLY    &trans  &trans    &trans        &trans     &trans  &trans
+&kp DELETE  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PERIOD     &kp KP_MINUS       &trans  &kp LEFT  &kp UP_ARROW  &kp RIGHT  &trans  &bt BT_CLR
+&trans      &kp N7        &kp N8  &kp N9        &kp N0         &kp PLUS           &trans  &trans    &kp DOWN      &trans     &trans  &trans
+                                  &trans        &trans         &trans             &trans  &trans    &trans
             >;
         };
 
