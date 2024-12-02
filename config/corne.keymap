@@ -64,6 +64,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
+            hold-trigger-key-positions = <27 36>;
+            flavor = "tap-preferred";
         };
 
         V_Paste: V_Paste {
@@ -73,6 +75,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <28 36>;
         };
 
         X_Cut: X_Cut {
@@ -82,6 +86,8 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
+            hold-trigger-key-positions = <36 26>;
+            flavor = "tap-preferred";
         };
     };
 
