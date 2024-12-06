@@ -17,6 +17,11 @@
             key-positions = <24 12>;
             layers = <0>;
         };
+
+        Screencap {
+            bindings = <&kp RA(P)>;
+            key-positions = <41 24 14>;
+        };
     };
 
     behaviors {
@@ -47,13 +52,13 @@
             tapping-term-ms = <301>;
         };
 
-        Tap_Hold500: Tap_Hold500 {
+        Tap_Hold: Tap_Hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_HOLD500";
+            label = "TAP_HOLD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <750>;
             flavor = "tap-preferred";
         };
     };
@@ -64,10 +69,10 @@
         QWERTY {
             display-name = "Base";
             bindings = <
-&kp TAB           &kp Q        &kp W        &kp E                 &kp R         &kp T      &kp Y      &kp U         &kp I          &kp O    &mt PRINTSCREEN P  &kp RIGHT_ALT
-&kp BACKSPACE     &kp A        &kp S        &kp D                 &kp F         &kp G      &kp H      &kp J         &kp K          &kp L    &kp SEMI           &kp SQT
-&Shift_Caps_Lock  &mt LC(Z) Z  &mt LC(X) X  &Tap_Hold500 LC(C) C  &mt LC(V) V   &kp B      &kp N      &kp M         &kp COMMA      &kp DOT  &kp FSLH           &kp RIGHT_SHIFT
-                                            &kp LEFT_CONTROL      &Lower_Layer  &kp RET    &kp SPACE  &Raise_Layer  &kp RIGHT_WIN
+&kp TAB           &kp Q              &kp W              &kp E              &kp R              &kp T      &kp Y      &kp U         &kp I          &kp O    &kp P     &kp RIGHT_ALT
+&kp BACKSPACE     &kp A              &kp S              &kp D              &kp F              &kp G      &kp H      &kp J         &kp K          &kp L    &kp SEMI  &kp SQT
+&Shift_Caps_Lock  &Tap_Hold LC(Z) Z  &Tap_Hold LC(X) X  &Tap_Hold LC(C) C  &Tap_Hold LC(V) V  &kp B      &kp N      &kp M         &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                                        &kp LEFT_CONTROL   &Lower_Layer       &kp RET    &kp SPACE  &Raise_Layer  &kp RIGHT_WIN
             >;
         };
 
