@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LOWER_LAYER";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&tog 1>, <&tog 0>;
+            bindings = <&mo 2>, <&tog 2>, <&tog 0>;
 
             tapping-term-ms = <300>;
         };
@@ -78,16 +78,6 @@
             >;
         };
 
-        Lower {
-            display-name = "Lower";
-            bindings = <
-&kp TAB        &kp N1        &kp N2  &kp N3        &kp KP_MULTIPLY  &kp KP_DIVIDE    &trans  &trans          &trans          &trans           &trans  &trans
-&kp BACKSPACE  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PLUS         &kp MINUS        &trans  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
-&trans         &kp N7        &kp N8  &kp N9        &kp N0           &kp PERIOD       &trans  &mkp LCLK       &mmv MOVE_DOWN  &mkp RCLK        &trans  &trans
-                                     &trans        &trans           &trans           &trans  &trans          &trans
-            >;
-        };
-
         Raise {
             display-name = "Raise";
             bindings = <
@@ -95,6 +85,16 @@
 &kp DELETE  &kp HOME  &kp PAGE_UP    &kp LEFT  &kp UP_ARROW  &kp RIGHT    &trans        &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH      &bt BT_CLR
 &trans      &kp END   &kp PAGE_DOWN  &trans    &kp DOWN      &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
                                      &trans    &trans        &trans       &trans        &trans        &trans
+            >;
+        };
+
+        Lower {
+            display-name = "Lower";
+            bindings = <
+&kp TAB        &kp N1        &kp N2  &kp N3        &kp KP_MULTIPLY  &kp KP_DIVIDE    &trans  &trans          &trans          &trans           &trans  &trans
+&kp BACKSPACE  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PLUS         &kp MINUS        &trans  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
+&trans         &kp N7        &kp N8  &kp N9        &kp N0           &kp PERIOD       &trans  &mkp LCLK       &mmv MOVE_DOWN  &mkp RCLK        &trans  &trans
+                                     &trans        &trans           &trans           &trans  &trans          &trans
             >;
         };
 
@@ -121,7 +121,7 @@
         compatible = "zmk,conditional-layers";
 
         function {
-            if-layers = <3 1>;
+            if-layers = <3 2>;
             then-layer = <4>;
         };
     };
