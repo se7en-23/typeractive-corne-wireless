@@ -53,7 +53,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RAISE_LAYER";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&tog 4>, <&tog 3>;
+            bindings = <&mo 0>, <&tog 0>, <&tog 0>;
 
             tapping-term-ms = <301>;
         };
@@ -98,24 +98,6 @@
 &kp BACKSPACE  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp EQUAL        &kp MINUS        &trans  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT  &trans  &trans
 &trans         &kp N7        &kp N8  &kp N9        &kp N0           &kp PERIOD       &trans  &trans          &kp DOWN_ARROW  &trans     &trans  &trans
                                      &trans        &trans           &trans           &trans  &trans          &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4   &trans     &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F8   &trans     &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11    &kp F12  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans   &trans     &trans   &trans  &trans
-            >;
-        };
-
-        Colemak {
-            bindings = <
-&kp TAB        &kp Q  &kp W  &kp F         &kp P   &kp G     &kp J   &kp L   &kp U      &kp Y       &kp SEMICOLON  &kp RCTRL
-&kp BACKSPACE  &kp A  &kp R  &kp S         &kp T   &kp D     &kp H   &kp N   &kp E      &kp I       &kp O          &kp SQT
-&trans         &kp Z  &kp X  &kp C         &kp V   &kp B     &kp K   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RIGHT_SHIFT
-                             &kp LEFT_WIN  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
