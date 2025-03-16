@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -54,14 +53,13 @@
             tapping-term-ms = <301>;
         };
 
-        Tap_Hold: Tap_Hold {
+        Tab_ESC: Tab_ESC {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_HOLD";
+            label = "TAB_ESC";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <750>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
         };
     };
 
@@ -71,10 +69,10 @@
         QWERTY {
             display-name = "Base";
             bindings = <
-&kp TAB           &kp Q              &kp W              &kp E              &kp R              &kp T      &kp Y      &kp U         &kp I          &kp O    &kp P     &kp ESCAPE
-&kp BACKSPACE     &kp A              &kp S              &kp D              &kp F              &kp G      &kp H      &kp J         &kp K          &kp L    &kp SEMI  &kp SQT
-&Shift_Caps_Lock  &Tap_Hold LC(Z) Z  &Tap_Hold LC(X) X  &Tap_Hold LC(C) C  &Tap_Hold LC(V) V  &kp B      &kp N      &kp M         &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                                        &kp LEFT_CONTROL   &Lower_Layer       &kp RET    &kp SPACE  &Raise_Layer  &kp RIGHT_WIN
+&Tab_ESC ESCAPE TAB  &kp Q  &kp W  &kp E             &kp R         &kp T      &kp Y      &kp U         &kp I          &kp O    &kp P     &kp ESCAPE
+&kp BACKSPACE        &kp A  &kp S  &kp D             &kp F         &kp G      &kp H      &kp J         &kp K          &kp L    &kp SEMI  &kp SQT
+&Shift_Caps_Lock     &none  &none  &none             &none         &kp B      &kp N      &kp M         &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                   &kp LEFT_CONTROL  &Lower_Layer  &kp RET    &kp SPACE  &Raise_Layer  &kp RIGHT_WIN
             >;
         };
 
@@ -91,7 +89,7 @@
         Lower {
             display-name = "Lower";
             bindings = <
-&kp TAB        &kp N1        &kp N2  &kp N3        &kp KP_MULTIPLY  &kp KP_DIVIDE    &trans  &trans          &trans          &trans     &trans  &trans
+&kp LA(TAB)    &kp N1        &kp N2  &kp N3        &kp KP_MULTIPLY  &kp KP_DIVIDE    &trans  &trans          &trans          &trans     &trans  &trans
 &kp BACKSPACE  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp PLUS         &kp MINUS        &trans  &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT  &trans  &trans
 &trans         &kp N7        &kp N8  &kp N9        &kp N0           &kp PERIOD       &trans  &trans          &kp DOWN_ARROW  &trans     &trans  &trans
                                      &trans        &trans           &trans           &trans  &trans          &trans
